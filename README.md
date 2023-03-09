@@ -3,7 +3,7 @@
 This project is an implementation of the YOLO (You Only Look Once) object detection algorithm using PyTorch. The purpose of this project is to provide a basic understanding of how YOLO works and how to implement it from scratch. 
 
 Important notes:
-  - this has been done by following different tutorials [2][3] and the paper [1]
+  - this has been done by following the excellent tutorials from Aladdin Persson [2], the original paper [1] and tanjeffreyz's repository[3].
   - the generated models are not maid to be used as they clearly overfit the training data.
 
 # Dependencies
@@ -49,22 +49,7 @@ Follow the instructions in the ‘train_on_colabs.ipynb' notebook.
 
 # References
 
-    [1] - [YOLOv1 Paper](https://arxiv.org/abs/1506.02640)
-    [2] - [Aladdin Persson's video that has been followed to create this project]([https://github.com/tanjeffreyz/yolo-v1](https://www.youtube.com/watch?v=n9_XyCGr-MI)
-    [3] - [tanjeffreyz's repository]https://github.com/tanjeffreyz/yolo-v1
-
-    OpenCV
-
-Acknowledgements
-
-This project is based on the work of Joseph Redmon and his YOLOv1 paper. Thanks to the PyTorch and OpenCV communities for their contributions to the project.
-
-
-
-
-The code was created by using the You Only Look Once [1] paper, tanjeffreyz' repository [2] and Aladdin Persson's video [3].
-
-
-
-
+    [1] - ![YOLOv1 Paper](https://arxiv.org/abs/1506.02640)
+    [2] - ![Aladdin Persson's video that has been followed to create this project]([https://github.com/tanjeffreyz/yolo-v1](https://www.youtube.com/watch?v=n9_XyCGr-MI)
+    [3] - ![tanjeffreyz's repository]https://github.com/tanjeffreyz/yolo-v1
 
