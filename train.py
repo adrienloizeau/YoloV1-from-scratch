@@ -4,6 +4,7 @@ import torch.optim as optim
 import torchvision.transforms.functional as FT
 from tqdm import tqdm
 from torch.utils.data import DataLoader
+import argparse
 from model import Yolov1
 from dataset import VOCDataset
 from utils import (
@@ -18,8 +19,15 @@ from utils import (
 )
 from loss import YoloLoss
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--img_dir', type=str, default='data/images', help='path to the directory containing images')
+parser.add_argument('--label_dir', type=str, default='data/labels', help='path to the directory containing labels')
+args = parser.parse_args()
+
 seed = 123
 torch.manual_seed(seed)
+
 
 # Hyperparameters 
 LEARNING_RATE = 2e-5
@@ -31,8 +39,12 @@ NUM_WORKERS = 2
 PIN_MEMORY = True
 LOAD_MODEL  = False
 LOAD_MODEL_FILE = "overfit.pth.tar"
-IMG_DIR = "data/images"
-LABEL_DIR = "data/labels"
+IMG_DIR = args.img_dir
+LABEL_DIR = args.label_dir
+
+def main():
+    # your code here
+
 
 class Compose(object):
     def __init__(self, transforms) -> None:
