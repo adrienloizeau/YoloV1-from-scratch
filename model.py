@@ -12,22 +12,28 @@ class Yolov1(nn.Module):
         layers = [
             # Conv1
             nn.Conv2d(in_channels, 64, kernel_size=7, stride = 2, padding = 3),
+            nn.BatchNorm2d(64),
             nn.LeakyReLU(0.1),
             nn.MaxPool2d(kernel_size = 2, stride= 2),
 
             # Conv2
             nn.Conv2d(64, 192, kernel_size=3, padding = 1),
+            nn.BatchNorm2d(192),
             nn.LeakyReLU(0.1),
             nn.MaxPool2d(kernel_size = 2, stride= 2),
 
             # Conv3
             nn.Conv2d(192, 128, kernel_size=1),
+            nn.BatchNorm2d(128),
             nn.LeakyReLU(0.1),
             nn.Conv2d(128, 256, kernel_size=3, padding = 1),
+            nn.BatchNorm2d(256),
             nn.LeakyReLU(0.1),
             nn.Conv2d(256, 256, kernel_size=1),
+            nn.BatchNorm2d(256),
             nn.LeakyReLU(0.1),
             nn.Conv2d(256,512, kernel_size=3, padding = 1),
+            nn.BatchNorm2d(512),
             nn.LeakyReLU(0.1),
             nn.MaxPool2d(kernel_size = 2, stride= 2)
         ]
@@ -36,14 +42,18 @@ class Yolov1(nn.Module):
         for _ in range(4):
             layers +=[
                 nn.Conv2d(512, 256, kernel_size=1),
+                nn.BatchNorm2d(256),
                 nn.LeakyReLU(0.1),
                 nn.Conv2d(256,512, kernel_size=3, padding = 1),
+                nn.BatchNorm2d(512),
                 nn.LeakyReLU(0.1)
                 ]
         layers+=[
             nn.Conv2d(512, 512, kernel_size=1),
+            nn.BatchNorm2d(512),
             nn.LeakyReLU(0.1),
             nn.Conv2d(512,1024, kernel_size=3, padding = 1),
+            nn.BatchNorm2d(1024),
             nn.MaxPool2d(kernel_size = 2, stride =2)
             ]
 
@@ -51,21 +61,27 @@ class Yolov1(nn.Module):
         for _ in range(2):
             layers+=[
                 nn.Conv2d(1024, 512, kernel_size=1),
+                nn.BatchNorm2d(512),
                 nn.LeakyReLU(0.1),
                 nn.Conv2d(512,1024, kernel_size=3, padding = 1),
+                nn.BatchNorm2d(1024),
                 nn.LeakyReLU(0.1)
             ]
         layers+= [
             nn.Conv2d(1024, 1024,kernel_size=3, padding = 1),
+            nn.BatchNorm2d(1024),
             nn.LeakyReLU(0.1),
-            nn.Conv2d(1024, 1024,kernel_size=3, stride = 2, padding = 1)
+            nn.Conv2d(1024, 1024,kernel_size=3, stride = 2, padding = 1),
+            nn.BatchNorm2d(1024)
         ]
 
         # Conv6
         layers +=[
             nn.Conv2d(1024,1024,3,padding = 1),
+            nn.BatchNorm2d(1024),
             nn.LeakyReLU(0.1),
             nn.Conv2d(1024,1024,3,padding = 1),
+            nn.BatchNorm2d(1024),
             nn.LeakyReLU(0.1)
         ]
 

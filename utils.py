@@ -230,7 +230,7 @@ def plot_image(image, boxes):
         # Add the patch to the Axes
         ax.add_patch(rect)
 
-    plt.show()
+    plt.savefig('result.png')
 
 def get_bboxes(
     loader,
