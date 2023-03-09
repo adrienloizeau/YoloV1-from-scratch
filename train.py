@@ -116,7 +116,7 @@ def main():
 
     for epoch in range(EPOCHS):
         pred_boxes, target_boxes = get_bboxes(
-            train_loader, model, iou_threshold = 0.5, threshold =0.4
+            train_loader, model, iou_threshold = 0.5, threshold =0.4, device = DEVICE
         )
         mean_average_prec = mean_average_precision(
             pred_boxes, target_boxes, iou_threshold = 0.5, box_format = "midpoint"
