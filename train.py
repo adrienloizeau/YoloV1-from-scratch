@@ -21,8 +21,7 @@ from loss import YoloLoss
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--img_dir', type=str, default='data/images', help='path to the directory containing images')
-parser.add_argument('--label_dir', type=str, default='data/labels', help='path to the directory containing labels')
+parser.add_argument('--dir', type=str, default='data/images', help='path to the directory all the files')
 args = parser.parse_args()
 
 seed = 123
@@ -39,8 +38,8 @@ NUM_WORKERS = 2
 PIN_MEMORY = True
 LOAD_MODEL  = False
 LOAD_MODEL_FILE = "overfit.pth.tar"
-IMG_DIR = args.img_dir
-LABEL_DIR = args.label_dir
+IMG_DIR = args.dir + "/images"
+LABEL_DIR =  args.dir + "/labels"
 
 class Compose(object):
     def __init__(self, transforms) -> None:
@@ -85,14 +84,14 @@ def main():
         load_checkpoint(torch.load(LOAD_MODEL_FILE), model, optimizer)
 
     train_dataset = VOCDataset(
-        "data/8examples.csv",
+        args.dir + "/8examples.csv",
         transform = transforms,
         img_dir = IMG_DIR,
         label_dir= LABEL_DIR
     
     )
     test_dataset = VOCDataset(
-        "data/test.csv",
+        args.dir + "/test.csv",
         transform = transforms,
         img_dir = IMG_DIR,
         label_dir= LABEL_DIR
