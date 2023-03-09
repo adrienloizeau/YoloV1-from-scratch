@@ -42,10 +42,6 @@ LOAD_MODEL_FILE = "overfit.pth.tar"
 IMG_DIR = args.img_dir
 LABEL_DIR = args.label_dir
 
-def main():
-    # your code here
-
-
 class Compose(object):
     def __init__(self, transforms) -> None:
         self.transforms = transforms
