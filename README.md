@@ -2,9 +2,6 @@
 
 This project is an implementation of the YOLO (You Only Look Once) object detection algorithm using PyTorch. The purpose of this project is to provide a basic understanding of how YOLO works and how to implement it from scratch. 
 
-Important notes:
-  - this has been done by following the excellent tutorials from Aladdin Persson [2], the original paper [1] and tanjeffreyz's repository[3].
-  - the generated models are not maid to be used as they clearly overfit the training data.
 
 # Dependencies
     matplotlib==3.7.1
@@ -47,9 +44,13 @@ Follow the instructions in the ‘train_on_colabs.ipynb' notebook.
 # Results
 ![Result](ressources/result.png)
 
+# Notes:
+  - this has been done by following the excellent tutorials from Aladdin Persson [2], the original paper [1] and tanjeffreyz's repository[3].
+  - the generated models are not maid to be used as they clearly overfit the training data.
+
 # References
 
-    [1] - ![YOLOv1 Paper](https://arxiv.org/abs/1506.02640)
-    [2] - ![Aladdin Persson's video that has been followed to create this project]([https://github.com/tanjeffreyz/yolo-v1](https://www.youtube.com/watch?v=n9_XyCGr-MI)
-    [3] - ![tanjeffreyz's repository]https://github.com/tanjeffreyz/yolo-v1
+[1] - ![YOLOv1 Paper](https://arxiv.org/abs/1506.02640)
+[2] - ![Aladdin Persson's video that has been followed to create this project]([https://github.com/tanjeffreyz/yolo-v1](https://www.youtube.com/watch?v=n9_XyCGr-MI)
+[3] - ![tanjeffreyz's repository]https://github.com/tanjeffreyz/yolo-v1
 
