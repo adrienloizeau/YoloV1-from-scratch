@@ -1,2 +1,4 @@
-# Yolov1_from_scratcj
-From scratch YOLOv1 python repository
+# Yolov1_from_scratch
+From scratch YOLOv1 python repository.
+
+
