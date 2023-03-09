@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from collections import Counter
 
+"""
+    File copied from :
+    https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLO
+"""
+
 def intersection_over_union(boxes_preds, boxes_labels, box_format="midpoint"):
     """
     Calculates intersection over union
