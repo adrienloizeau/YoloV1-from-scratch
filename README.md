@@ -42,6 +42,7 @@ Follow the instructions in the ‘train_on_colabs.ipynb' notebook.
 ![Architecture](ressources/architecture.png)
 
 # Results
+The model has only been trained on the training data and is therefore overfitting. The goal of this project is to understand how the model works, not to train a real model from scratch.
 ![Result](ressources/result.png)
 
 # Notes:
