@@ -51,6 +51,8 @@ Follow the instructions in the ‘train_on_colabs.ipynb' notebook.
 # References
 
 [1] - ![YOLOv1 Paper](https://arxiv.org/abs/1506.02640)
-[2] - ![Aladdin Persson's video that has been followed to create this project]([https://github.com/tanjeffreyz/yolo-v1](https://www.youtube.com/watch?v=n9_XyCGr-MI)
-[3] - ![tanjeffreyz's repository]https://github.com/tanjeffreyz/yolo-v1
+
+[2] - ![Aladdin Persson's video that has been followed to create this project](https://www.youtube.com/watch?v=n9_XyCGr-MI)
+
+[3] - ![tanjeffreyz's repository](https://github.com/tanjeffreyz/yolo-v1)
 
