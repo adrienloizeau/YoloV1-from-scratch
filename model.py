@@ -72,23 +72,20 @@ class Yolov1(nn.Module):
         # Block 7
         layers += [
             nn.Flatten(),
-            nn.Linear(config.S * config.S * 1024, 4096),
-            nn.Dropout(),
+            nn.Linear(1024 * config.S * config.S, 496),
+            nn.Dropout(0.0),
             nn.LeakyReLU(0.1),
-            nn.Linear(4096,config.S * config.S * self.depth),
+            nn.Linear(496, config.S * config.S * (config.C + config.B * 5))
         ]
 
         self.model = nn.Sequential(*layers)
     
     def forward(self, x):
-         return torch.reshape(
-            self.model.forward(x),
-            (x.size(dim=0), config.S, config.S, self.depth)
-        )
+         return self.model(x)
 
 def test():
     model  = Yolov1()
     x = torch.randn((2,3,448,448))
     print(model(x).shape)
 
-test()
+#test()
