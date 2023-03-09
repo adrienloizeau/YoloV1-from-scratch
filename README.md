@@ -1,6 +1,6 @@
 # Yolov1_from_scratch
 
-This project is an implementation of the YOLO (You Only Look Once) object detection algorithm using PyTorch. The purpose of this project is to provide a basic understanding of how YOLO works and how to implement it from scratch. 
+This project is an implementation of the YOLO (You Only Look Once) object detection algorithm using PyTorch. The purpose of this project is to provide a basic understanding of how YOLO works and how to implement it from scratch. The code has been done by following the [2] video.
 
 
 # Dependencies
