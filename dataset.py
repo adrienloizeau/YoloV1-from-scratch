@@ -3,10 +3,11 @@ import os
 import pandas as pd
 from PIL import Image
 import config
+import argparse
 
 
 # Questions : 
-# Pourquoi 5 fois le nombre de boxes ? 
+# Pourquoi 5 fois le nombre de boxes ? -> Chaque bounding box a 5 éléments
 
 class VOCDataset(torch.utils.data.Dataset):
     def __init__(self, csv_file, img_dir, label_dir, transform = None) -> None:
@@ -42,6 +43,7 @@ class VOCDataset(torch.utils.data.Dataset):
                 image, boxes = self.transform(image, boxes)
             
             label_matrix = torch.zeros((self.S, self.S,self.C +5 * self.B))
+
             for box in boxes:
                 class_label, x, y, width, height = box.tolist()
                 class_label = int(class_label)
@@ -60,6 +62,35 @@ class VOCDataset(torch.utils.data.Dataset):
                         )
                     label_matrix[i,j, 21:25] = box_coordinates
                     label_matrix[i,j,class_label] = 1
-            
+
             return image, label_matrix
+
+
+if __name__ == '__main__':
+
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--csv_file', type=str, default='8examples.csv', help='Path of the csv file')
+  parser.add_argument('--img_dir', type=str, default='images/', help='Path to the images')
+  parser.add_argument('--label_dir', type=str, default='labels/', help='Path to the labels')
+  args = parser.parse_args()
+
+  CSV_DIR = args.csv_file
+  IMG_DIR = args.img_dir
+  LABEL_DIR = args.label_dir
+
+  train_dataset = VOCDataset(
+      CSV_DIR,
+      transform = None,
+      img_dir = IMG_DIR,
+      label_dir= LABEL_DIR
+  )
+  image, label_matrix = train_dataset[0]
+
+  print("####### Dataset ###### ")
+  print(f"{image= }")
+  print(f"{label_matrix.shape = }")
+  print(f"{label_matrix = }")
+  print("______________________")
+  print(f"{label_matrix[1].shape = }")
+  print(f"{label_matrix[1] = }")
 
