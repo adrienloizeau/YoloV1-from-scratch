@@ -1,0 +1,43 @@
+#!/bin/bash 
+
+#SBATCH --job-name=xaiBoundingBox
+#SBATCH --nodes=1
+#SBATCH --partition=gpu_prod_long
+#SBATCH --time 12:00:00
+#SBATCH --output=logslurms/slurm-%j.out
+#SBATCH --error=logslurms/slurm-%j.err
+
+# ---------- This is the script to launch a SLURM job ---------- #
+
+# Load the conda module
+export PATH=/opt/conda/bin:$PATH
+
+# Load the conda environment
+source activate xai_boundingboxes
+
+current_dir=`pwd`
+
+# Copying the source directory
+echo "Copying the source directory..."
+
+mkdir $TMPDIR/Yolov1_from_scratch
+
+# Copying the source directory to the temp directory on the disk of the node
+# excluding the data directory
+rsync -r /usr/users/xai_boundingboxes/loizeaua/Yolov1_from_scratch/ $TMPDIR/Yolov1_from_scratch
+
+echo "Directory copied !"
+
+# Move to the temp directory
+cd $TMPDIR/Yolov1_from_scratch
+
+export WANDB_KEY=$(cat config/wandb_key.txt)
+wandb login $WANDB_KEY
+
+export PYTHONPATH="${PYTHONPATH}:$TMPDIR/Yolov1_from_scratch"
+ls
+python3 src/train.py
+
+# Transfer output back on the disk
+rsync -ravhzP $TMPDIR/yolov1_from_scratch/models/* $current_dir/models/
+echo "Finished !"

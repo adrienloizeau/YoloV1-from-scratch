@@ -1,6 +1,14 @@
 # Dataset
-data.zip
 data
+dataset
+dataset.zip
+pascalvoc-yolo.zip
+
+# kaggle login
+kaggle.json
+
+# Wandb key
+wandb_key.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

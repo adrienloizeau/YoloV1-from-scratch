@@ -1,0 +1,27 @@
+Copying the source directory...
+Directory copied !
+data
+environment.yml
+kaggle.json
+logsenv
+logslurms
+models
+README.md
+requirements.txt
+ressources
+scripts
+src
+train_on_collabs.ipynb
+Train mAP:0.0
+Mean loss was 0.08887236290003943
+Mean loss was 0.07696134437407766
+Train mAP:0.0209785345941782
+Mean loss was 0.07291963467563407
+Mean loss was 0.07246810463922364
+Train mAP:0.0016149033326655626
+Mean loss was 0.06903229669312348
+Mean loss was 0.09593813068100385
+Train mAP:0.01431504637002945
+Mean loss was 0.06548664004042529
+Mean loss was 0.0756002382508346
+Train mAP:0.002082482445985079

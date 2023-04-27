@@ -1,0 +1,161 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes
+
+  added / updated specs:
+    - python=3.9
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main None
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu None
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2023.01.10-h06a4308_0 None
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1 None
+  libffi             pkgs/main/linux-64::libffi-3.4.2-h6a678d5_6 None
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 None
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 None
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 None
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0 None
+  openssl            pkgs/main/linux-64::openssl-1.1.1t-h7f8727e_0 None
+  pip                pkgs/main/linux-64::pip-23.0.1-py39h06a4308_0 None
+  python             pkgs/main/linux-64::python-3.9.16-h7a1cb2a_2 None
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0 None
+  setuptools         pkgs/main/linux-64::setuptools-66.0.0-py39h06a4308_0 None
+  sqlite             pkgs/main/linux-64::sqlite-3.41.2-h5eee18b_0 None
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0 None
+  tzdata             pkgs/main/noarch::tzdata-2023c-h04d1e81_0 None
+  wheel              pkgs/main/linux-64::wheel-0.38.4-py39h06a4308_0 None
+  xz                 pkgs/main/linux-64::xz-5.2.10-h5eee18b_1 None
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 None
+
+
+Proceed ([y]/n)? 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate xai_boundingboxes
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Retrieving notices: ...working... done
+Collecting matplotlib==3.7.1
+  Downloading matplotlib-3.7.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 31.6 MB/s eta 0:00:00
+Collecting numpy==1.24.2
+  Using cached numpy-1.24.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+Collecting pandas==1.5.3
+  Using cached pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+Collecting Pillow==9.4.0
+  Downloading Pillow-9.4.0-cp39-cp39-manylinux_2_28_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 29.0 MB/s eta 0:00:00
+Collecting torch==1.13.1
+  Downloading torch-1.13.1-cp39-cp39-manylinux1_x86_64.whl (887.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 1.7 MB/s eta 0:00:00
+Collecting torchvision==0.14.1
+  Downloading torchvision-0.14.1-cp39-cp39-manylinux1_x86_64.whl (24.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.2/24.2 MB 24.6 MB/s eta 0:00:00
+Collecting tqdm==4.65.0
+  Using cached tqdm-4.65.0-py3-none-any.whl (77 kB)
+Collecting kaggle
+  Downloading kaggle-1.5.13.tar.gz (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 kB 2.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting wandb
+  Downloading wandb-0.15.0-py3-none-any.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 23.4 MB/s eta 0:00:00
+Collecting pyparsing>=2.3.1
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 3.9 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.4.4-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 21.3 MB/s eta 0:00:00
+Collecting importlib-resources>=3.2.0
+  Downloading importlib_resources-5.12.0-py3-none-any.whl (36 kB)
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (299 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 299.7/299.7 kB 10.5 MB/s eta 0:00:00
+Collecting python-dateutil>=2.7
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.39.3-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 18.2 MB/s eta 0:00:00
+Collecting packaging>=20.0
+  Using cached packaging-23.1-py3-none-any.whl (48 kB)
+Collecting pytz>=2020.1
+  Using cached pytz-2023.3-py2.py3-none-any.whl (502 kB)
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Using cached nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Using cached nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Using cached nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Using cached nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+Collecting typing-extensions
+  Using cached typing_extensions-4.5.0-py3-none-any.whl (27 kB)
+Collecting requests
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Requirement already satisfied: wheel in /usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r requirements.txt (line 5)) (0.38.4)
+Requirement already satisfied: setuptools in /usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r requirements.txt (line 5)) (66.0.0)
+Collecting six>=1.10
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting certifi
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting python-slugify
+  Downloading python_slugify-8.0.1-py2.py3-none-any.whl (9.7 kB)
+Collecting urllib3
+  Using cached urllib3-1.26.15-py2.py3-none-any.whl (140 kB)
+Collecting sentry-sdk>=1.0.0
+  Using cached sentry_sdk-1.20.0-py2.py3-none-any.whl (198 kB)
+Collecting docker-pycreds>=0.4.0
+  Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Collecting psutil>=5.0.0
+  Using cached psutil-5.9.5-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (282 kB)
+Collecting appdirs>=1.4.3
+  Using cached appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Collecting protobuf!=4.21.0,<5,>=3.15.0
+  Using cached protobuf-4.22.3-cp37-abi3-manylinux2014_x86_64.whl (302 kB)
+Collecting PyYAML
+  Using cached PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (661 kB)
+Collecting GitPython!=3.1.29,>=1.0.0
+  Using cached GitPython-3.1.31-py3-none-any.whl (184 kB)
+Collecting pathtools
+  Using cached pathtools-0.1.2-py3-none-any.whl
+Collecting setproctitle
+  Using cached setproctitle-1.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (30 kB)
+Collecting Click!=8.0.0,>=7.0
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting gitdb<5,>=4.0.1
+  Using cached gitdb-4.0.10-py3-none-any.whl (62 kB)
+Collecting zipp>=3.1.0
+  Downloading zipp-3.15.0-py3-none-any.whl (6.8 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (199 kB)
+Collecting text-unidecode>=1.3
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.2/78.2 kB 3.7 MB/s eta 0:00:00
+Collecting smmap<6,>=3.0.1
+  Using cached smmap-5.0.0-py3-none-any.whl (24 kB)
+Building wheels for collected packages: kaggle
+  Building wheel for kaggle (setup.py): started
+  Building wheel for kaggle (setup.py): finished with status 'done'
+  Created wheel for kaggle: filename=kaggle-1.5.13-py3-none-any.whl size=77716 sha256=b968180704699f06204f410ea3662d4005ffd2fa5fa633006e0ffd7054ce2fff
+  Stored in directory: /usr/users/xai_boundingboxes/loizeaua/.cache/pip/wheels/9c/45/15/6d6d116cd2539fb8f450d64b0aee4a480e5366bb11b42ac763
+Successfully built kaggle
+Installing collected packages: text-unidecode, pytz, pathtools, appdirs, zipp, urllib3, typing-extensions, tqdm, smmap, six, setproctitle, PyYAML, python-slugify, pyparsing, psutil, protobuf, Pillow, packaging, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, numpy, kiwisolver, idna, fonttools, cycler, Click, charset-normalizer, certifi, sentry-sdk, requests, python-dateutil, nvidia-cudnn-cu11, importlib-resources, gitdb, docker-pycreds, contourpy, torch, pandas, matplotlib, kaggle, GitPython, wandb, torchvision
+Successfully installed Click-8.1.3 GitPython-3.1.31 Pillow-9.4.0 PyYAML-6.0 appdirs-1.4.4 certifi-2022.12.7 charset-normalizer-3.1.0 contourpy-1.0.7 cycler-0.11.0 docker-pycreds-0.4.0 fonttools-4.39.3 gitdb-4.0.10 idna-3.4 importlib-resources-5.12.0 kaggle-1.5.13 kiwisolver-1.4.4 matplotlib-3.7.1 numpy-1.24.2 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 packaging-23.1 pandas-1.5.3 pathtools-0.1.2 protobuf-4.22.3 psutil-5.9.5 pyparsing-3.0.9 python-dateutil-2.8.2 python-slugify-8.0.1 pytz-2023.3 requests-2.28.2 sentry-sdk-1.20.0 setproctitle-1.3.2 six-1.16.0 smmap-5.0.0 text-unidecode-1.3 torch-1.13.1 torchvision-0.14.1 tqdm-4.65.0 typing-extensions-4.5.0 urllib3-1.26.15 wandb-0.15.0 zipp-3.15.0
+Finished !

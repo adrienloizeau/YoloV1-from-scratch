@@ -1,0 +1,18 @@
+name: xaibboxes
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8.15
+  - pip=22.2.2
+  - pip:
+      - matplotlib==3.7.1
+      - numpy==1.24.2
+      - pandas==1.5.3
+      - Pillow==9.4.0
+      - torch==1.13.1
+      - torchvision==0.14.1
+      - tqdm==4.65.0
+      - kaggle
+
+prefix: /Users/adrien/opt/anaconda3/envs/cs_bboxes

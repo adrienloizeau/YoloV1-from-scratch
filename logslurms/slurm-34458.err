@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/tmp/loizeaua-34458/Yolov1_from_scratch/src/train.py", line 175, in <module>
+    main()
+  File "/tmp/loizeaua-34458/Yolov1_from_scratch/src/train.py", line 116, in main
+    train_dataset = VOCDataset(
+  File "/tmp/loizeaua-34458/Yolov1_from_scratch/src/dataset.py", line 15, in __init__
+    self.annotations = pd.read_csv(csv_file)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/usr/users/xai_boundingboxes/loizeaua/.conda/envs/xai_boundingboxes/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/images/train.csv'
+rsync: change_dir "/tmp/loizeaua-34458/yolov1_from_scratch/models" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1207) [sender=3.1.3]

@@ -1,0 +1,19 @@
+>Copying the source directory...
+Directory copied !
+data
+environment.yml
+kaggle.json
+logsenv
+logslurms
+models
+README.md
+requirements.txt
+ressources
+scripts
+src
+train_on_collabs.ipynb
+sending incremental file list
+
+sent 20 bytes  received 12 bytes  64.00 bytes/sec
+total size is 0  speedup is 0.00
+Finished !
