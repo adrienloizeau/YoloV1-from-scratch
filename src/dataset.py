@@ -47,14 +47,15 @@ class VOCDataset(torch.utils.data.Dataset):
             for box in boxes:
                 class_label, x, y, width, height = box.tolist()
                 class_label = int(class_label)
-                # Divide the image in the number of cells
+                # Get to which cell row and column the box belongs to
                 i, j = int(self.S * y), int(self.S * x) 
+                # Get the coordinate within the cell
                 x_cell, y_cell = self.S * x - j,self.S * y - i
                 width_cell, height_cell = (
                     width * self.S,
                     height * self.S
                 )
-
+                # If there is no object in i,j add one
                 if label_matrix[i,j,20]==0:
                     label_matrix[i,j,20]= 1
                     box_coordinates = torch.tensor(
@@ -63,6 +64,7 @@ class VOCDataset(torch.utils.data.Dataset):
                     label_matrix[i,j, 21:25] = box_coordinates
                     label_matrix[i,j,class_label] = 1
 
+            # Return a matrix that has for each cell either an object or nothing
             return image, label_matrix
 
 
